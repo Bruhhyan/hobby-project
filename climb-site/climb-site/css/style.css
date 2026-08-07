@@ -244,4 +244,25 @@ footer.site-footer a:hover {
   background-attachment: fixed
 }
 
+.navbar-climb .dropdown-menu {
+  background-color: var(--stone-dark);
+  border: none;
+  border-radius: 2px;
+}
 
+.navbar-climb .dropdown-item {
+  color: var(--chalk-dim);
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.navbar-climb .dropdown-item:hover {
+  background-color: var(--stone);
+  color: var(--rope);
+}
+
+.navbar-climb .dropdown-toggle::after {
+  border-top-color: var(--chalk-dim);
+}
