@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cycling | The Long Ride </title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-climb fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">The Long Ride</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Rock Climbing
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home</a></li>
+              <li><a class="dropdown-item" href="log.html">Grades &amp; Log</a></li>
+              <li><a class="dropdown-item" href="join.html">Join a Session</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Cycling
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="cycling-home.html">Home</a></li>
+              <li><a class="dropdown-item" href="cycling-page2.html">My Gear</a></li>
+              <li><a class="dropdown-item" href="cycling-stats.html">Stats</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<header style="background-color: var(--stone-dark); color: var(--chalk); padding: 3.5rem 0 2.5rem; margin-top: 64px;">
+  <div class="container">
+    <p class="section-eyebrow">Stats</p>
+    <h1 style="color: var(--chalk);">The Numbers So Far</h1>
+    <p class="lead" style="color: var(--chalk-dim); max-width: 60ch;">Everything I've tracked this year, and the ride that stands out most.</p>
+  </div>
+</header>
+
+
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-eyebrow">Quick Stats</p>
+    <h2 class="mb-4">This Year So Far</h2>
+    <div class="table-responsive">
+      <table class="table table-climb align-middle">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Total distance ridden</td>
+            <td><span class="grade-badge">384 KM</span></td>
+          </tr>
+          <tr>
+            <td>Longest single ride</td>
+            <td><span class="grade-badge">67.2 KM</span></td>
+          </tr>
+          <tr>
+            <td>Best average pace</td>
+            <td><span class="grade-badge">25 KM/H</span></td>
+          </tr>
+          <tr>
+            <td>Favourite route</td>
+            <td>Marina Bay Sands</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LONGEST RIDE ============ -->
+<section class="section">
+  <div class="container">
+    <p class="section-eyebrow">Personal Best</p>
+    <h2 class="mb-4">My Longest Ride</h2>
+
+    <div class="climb-card" style="max-width: 640px;">
+      <span class="grade-tape">LONGEST RIDE</span>
+      <h3>[Changi Dino Mile]</h3>
+      <table class="table table-borderless mb-3" style="max-width: 400px;">
+        <tbody>
+          <tr>
+            <td style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.85rem; padding-left: 0;">Distance</td>
+            <td>67.2 km</td>
+          </tr>
+          <tr>
+            <td style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.85rem; padding-left: 0;">Duration</td>
+            <td>3h 20min</td>
+          </tr>
+          <tr>
+            <td style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.85rem; padding-left: 0;">Date</td>
+            <td>14 November 2025</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Was definitely one of my most memorable rides, it was my first time trying my new bike and I really enjoyed the challenge.</p>
+    </div>
+
+    <video controls muted style="width: 100%; height: auto; max-width: 640px; border-radius: 2px; margin-top: 1.5rem;">
+      <source src="imagesN/vid1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+  <div class="container d-flex justify-content-between">
+    <a href="cycling-gear.html" class="btn btn-rope">&larr; My Gear</a>
+    <a href="cycling-home.html" class="btn btn-rope">  Home &rarr;</a>
+  </div>
+  </section>
+  
+</section>
+
+  <footer class="site-footer">
+    <div class="container">
+       Add me on Strava!
+      <br>
+      <a href="https://www.strava.com/athletes/106605871" target="_blank">
+        <i class="bi bi-strava"></i> 
+      </a>
+    </div>
+  </footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
