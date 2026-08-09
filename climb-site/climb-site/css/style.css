@@ -248,7 +248,20 @@ footer.site-footer a:hover {
   background-color: var(--stone-dark);
   border: none;
   border-radius: 2px;
+  display: block;            
+  max-height: 0;                
+  overflow: hidden;             
+  opacity: 0;
+  padding: 0;
+  transition: max-height 2s ease, opacity 0.25s ease, padding 0.3s ease;
 }
+
+.navbar-climb .dropdown-menu.show {
+  max-height: 300px;    
+  opacity: 1;
+  padding: 0.5rem 0;     
+}
+
 
 .navbar-climb .dropdown-item {
   color: var(--chalk-dim);
