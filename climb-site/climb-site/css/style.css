@@ -279,3 +279,8 @@ footer.site-footer a:hover {
 .navbar-climb .dropdown-toggle::after {
   border-top-color: var(--chalk-dim);
 }
+
+.section-dark {
+  background-color: var(--stone);
+  color: var(--chalk);
+}
