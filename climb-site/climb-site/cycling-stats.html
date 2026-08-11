@@ -96,7 +96,8 @@
   </div>
 </section>
 
-<!-- ============ LONGEST RIDE ============ -->
+
+
 <section class="section">
   <div class="container">
     <p class="section-eyebrow">Personal Best</p>
@@ -128,9 +129,87 @@
       <source src="imagesN/vid1.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-
-
   </div>
+
+<!-- ============ LOG A RIDE (FORM) ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-eyebrow">Ride Log</p>
+    <h2 class="mb-4">Log Today's Ride</h2>
+    <div class="row">
+      <div class="col-lg-7">
+        <form id="rideLogForm" class="form-climb">
+          <div class="mb-3">
+            <label for="riderName" class="form-label">Your name</label>
+            <input type="text" class="form-control" id="riderName" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="routeName" class="form-label">Route ridden</label>
+            <input type="text" class="form-control" id="routeName" placeholder="e.g. Changi Dino Mile" required>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="distanceKm" class="form-label">Distance (km)</label>
+              <input type="number" class="form-control" id="distanceKm" min="1" step="0.1" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="rideTime" class="form-label">Time taken (minutes)</label>
+              <input type="number" class="form-control" id="rideTime" min="1" required>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="rideNotes" class="form-label">Notes</label>
+            <textarea class="form-control" id="rideNotes" rows="3" placeholder="Optional — how did the ride feel?"></textarea>
+          </div>
+
+          <button type="button" class="btn btn-rope" onclick="handleRideLogSubmit()">Log ride</button>
+        </form>
+      </div>
+
+      <div class="col-lg-5">
+        <div id="ride-response-card" style="display: none; background: var(--stone-dark); color: var(--chalk); border-left: 4px solid var(--rope); padding: 1.75rem;">
+          <span class="grade-tape">Ride logged</span>
+          <h3 id="rideResponseHeading" class="mt-2" style="color: var(--chalk);"></h3>
+          <p id="rideResponseBody"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function handleRideLogSubmit() {
+    let name = document.getElementById("riderName").value;
+    let route = document.getElementById("routeName").value;
+    let distance = parseFloat(document.getElementById("distanceKm").value);
+    let minutes = parseInt(document.getElementById("rideTime").value);
+    let notes = document.getElementById("rideNotes").value;
+
+    if (name === "" || route === "" || isNaN(distance) || isNaN(minutes)) {
+      alert("Please fill in your name, route, distance, and time before logging.");
+      return;
+    }
+
+    let avgSpeed = (distance / (minutes / 60)).toFixed(1);
+
+    let heading = route;
+    let body = "Amazing, " + name + "! You covered " + distance +
+               " km in " + minutes + " minutes — an average speed of " + avgSpeed + " km/h.";
+
+    if (notes !== "") {
+      body += " Notes: " + notes;
+    }
+
+    document.getElementById("rideResponseHeading").textContent = heading;
+    document.getElementById("rideResponseBody").textContent = body;
+    document.getElementById("ride-response-card").style.display = "block";
+    document.getElementById("ride-response-card").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+
 
   <section class="section" style="padding-top: 0;">
   <div class="container d-flex justify-content-between">
@@ -140,7 +219,6 @@
   </section>
   
 </section>
-
   <footer class="site-footer">
     <div class="container">
        Add me on Strava!
@@ -155,3 +233,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<!-- AI USE: [Used Claude AI]
+
+- Guidance on integrating with a teammate's existing shared stylesheet without 
+duplicating/conflicting with their existing class names
+
+- Initial page structure and layout for cycling pages
+ 
+- Guidance on how to make the ride log form functional, including JavaScript
+for handling form submission and displaying a response card with the logged ride details -->
